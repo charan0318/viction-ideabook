@@ -36,16 +36,6 @@ const IdeabookPage = () => {
       <main className="section-container py-16 relative overflow-hidden">
         {/* Animated Background Images */}
         <div className="absolute inset-0 pointer-events-none">
-          {/* DeFi Hub Image - Left side, large */}
-          <div className="absolute top-40 -left-20 w-96 h-96 opacity-10" style={{ animation: 'floatComplex 12s ease-in-out infinite' }}>
-            <img 
-              src="https://viction.xyz/static/media/defi-hub.1661173bbad5d6064ded.png" 
-              alt="DeFi Hub"
-              className="w-full h-full object-contain transform rotate-12 hover:rotate-6 transition-transform duration-[3s] ease-in-out"
-              style={{ animation: 'breathe 8s ease-in-out infinite' }}
-            />
-          </div>
-          
           {/* Global Payment Image - Right side, large */}
           <div className="absolute top-80 -right-24 w-80 h-80 opacity-8" style={{ animation: 'floatComplex 10s ease-in-out infinite', animationDelay: '2s' }}>
             <img 
@@ -86,21 +76,20 @@ const IdeabookPage = () => {
             />
           </div>
           
-          {/* Extra small Global Payment - center right background */}
-          <div className="absolute bottom-60 right-1/4 w-40 h-40 opacity-5" style={{ animation: 'floatComplex 18s ease-in-out infinite', animationDelay: '3s' }}>
-            <img 
-              src="https://viction.xyz/static/media/global-payment.547fe1f6ba16db0959e5.png" 
-              alt="Global Payment"
-              className="w-full h-full object-contain transform rotate-180"
-              style={{ animation: 'breathe 7s ease-in-out infinite', animationDelay: '5s' }}
-            />
-          </div>
+          
         </div>
 
         {/* Introduction */}
         <div className="text-center mb-20 relative z-10">
           {/* Background elements */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 w-32 h-32 bg-gradient-to-br from-[var(--viction-primary)] to-[var(--viction-secondary)] rounded-full opacity-5 blur-3xl" />
+          
+          <div className="animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 bg-[var(--viction-surface-elevated)] border border-[var(--viction-border)] rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
+              <Star className="w-4 h-4 text-[var(--viction-primary)]" />
+              <span className="text-sm font-medium text-[var(--viction-text-secondary)]">Viction Retrodrop Season 2 Ideabook</span>
+            </div>
+          </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance relative">
             11 Creative Visions.<br />
@@ -200,6 +189,11 @@ const IdeabookPage = () => {
           </div>
           
           <div className="flex flex-col items-center gap-4">
+            <div className="flex justify-center gap-8 text-sm text-[var(--viction-text-muted)] mb-4">
+              <span>Created for Viction Retrodrop Season 2</span>
+              <span>•</span>
+              <span>Built with vision for the ecosystem</span>
+            </div>
             <p className="text-[var(--viction-text-secondary)] text-sm">
               Built with ❤️ from{" "}
               <a 

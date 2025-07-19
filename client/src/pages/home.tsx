@@ -15,11 +15,7 @@ const Home = () => {
               </div>
               <span className="font-semibold text-lg text-[var(--viction-text-primary)]">Viction Ideabook</span>
             </div>
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#" className="text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] transition-colors font-medium">About</a>
-              <a href="#" className="text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] transition-colors font-medium">Projects</a>
-              <a href="#" className="text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] transition-colors font-medium">Contact</a>
-            </nav>
+            
           </div>
         </div>
       </header>
