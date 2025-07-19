@@ -40,12 +40,12 @@ const IdeabookPage = () => {
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 w-32 h-32 bg-gradient-to-br from-[var(--viction-primary)] to-[var(--viction-secondary)] rounded-full opacity-5 blur-3xl" />
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance relative">
-            11 Visionary Projects.<br />
-            <span className="gradient-text">One Ecosystem.</span>
+            11 Creative Visions.<br />
+            <span className="gradient-text">Glory for Everyone.</span>
           </h1>
           <p className="text-xl text-[var(--viction-text-secondary)] max-w-3xl mx-auto text-balance">
-            Explore how each Retrodrop allocation could transform into ecosystem-defining experiences 
-            that bring interoperability, culture, and utility to Viction.
+            My bounty submission answering: "If I were each project and received VIC from Retrodrop, 
+            what would I build?" - featuring integrated ecosystem experiences.
           </p>
           
           {/* Stats bar */}
@@ -126,11 +126,15 @@ const IdeabookPage = () => {
 
         {/* Footer Section */}
         <section className="text-center py-16 border-t border-[var(--viction-border)]">
-          <h3 className="text-2xl font-bold mb-4">Ready to Build the Future?</h3>
+          <h3 className="text-2xl font-bold mb-4">Glory is for Everyone</h3>
           <p className="text-[var(--viction-text-secondary)] mb-8 max-w-2xl mx-auto">
-            These ideas represent a vision for what's possible when projects work together 
-            to create something greater than the sum of their parts.
+            This bounty submission demonstrates how each Retrodrop recipient could integrate 
+            with the ecosystem to create composable, user-centric experiences that embody Viction's vision.
           </p>
+          <div className="inline-flex items-center gap-2 bg-[var(--viction-surface-elevated)] border border-[var(--viction-border)] rounded-full px-6 py-3">
+            <Star className="w-5 h-5 text-[var(--viction-primary)]" />
+            <span className="font-medium text-[var(--viction-text-primary)]">Viction Retrodrop #2 Accelerates</span>
+          </div>
           <Link href="/">
             <Button className="btn-primary">
               Back to Overview

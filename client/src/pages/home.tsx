@@ -38,17 +38,17 @@ const Home = () => {
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-[var(--viction-surface-elevated)] border border-[var(--viction-border)] rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
               <Star className="w-4 h-4 text-[var(--viction-primary)]" />
-              <span className="text-sm font-medium text-[var(--viction-text-secondary)]">Viction Retrodrop Season 2</span>
+              <span className="text-sm font-medium text-[var(--viction-text-secondary)]">Own the Glory My Way Bounty</span>
             </div>
             
             <h1 className="font-bold mb-8 text-balance max-w-5xl mx-auto">
-              What If Every VIC Grant Became a{" "}
-              <span className="gradient-text">Viction-Native Experience?</span>
+              If I Were Each Project, What Would I Build With My{" "}
+              <span className="gradient-text">VIC Allocation?</span>
             </h1>
             
             <p className="text-xl text-[var(--viction-text-secondary)] max-w-3xl mx-auto mb-12 text-balance leading-relaxed">
-              A visionary ideabook reimagining how 11 Retrodrop allocations could transform into 
-              ecosystem-defining features that bring interoperability, culture, and real utility to users.
+              A creative bounty submission showcasing 11 visionary ideas for how each Retrodrop recipient 
+              could build ecosystem-defining experiences that integrate with Viction's core theme: Glory is for everyone.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -153,10 +153,84 @@ const Home = () => {
         <div className="text-center mt-16">
           <Link href="/ideabook">
             <Button className="btn-primary group px-8 py-3">
-              <span>Explore All Projects</span>
+              <span>Explore All Project Ideas</span>
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* Viction Graphics Section */}
+      <section className="section-container py-20 relative overflow-hidden">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-4 text-[var(--viction-text-primary)]">Powered by Viction's Vision</h2>
+          <p className="text-lg text-[var(--viction-text-secondary)] max-w-2xl mx-auto">
+            Building on the foundation of ownership economy, gaming, payments, and community
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-4 gap-8 items-center justify-center">
+          <div className="text-center group">
+            <div className="w-20 h-20 mx-auto mb-4 p-4 bg-[var(--viction-surface-elevated)] rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <img 
+                src="https://viction.xyz/static/media/token-vic.de13484df2ab71f95122.png" 
+                alt="VIC Token"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h3 className="font-semibold text-[var(--viction-text-primary)]">VIC Token</h3>
+            <p className="text-sm text-[var(--viction-text-secondary)]">Ownership Economy</p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-20 h-20 mx-auto mb-4 p-4 bg-[var(--viction-surface-elevated)] rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <img 
+                src="https://viction.xyz/static/media/game-power.d0d38769a12b38166d1b.png" 
+                alt="Gaming Power"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h3 className="font-semibold text-[var(--viction-text-primary)]">Gaming Power</h3>
+            <p className="text-sm text-[var(--viction-text-secondary)]">Entertainment & NFTs</p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-20 h-20 mx-auto mb-4 p-4 bg-[var(--viction-surface-elevated)] rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <img 
+                src="https://viction.xyz/static/media/global-payment.547fe1f6ba16db0959e5.png" 
+                alt="Global Payments"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h3 className="font-semibold text-[var(--viction-text-primary)]">Global Payments</h3>
+            <p className="text-sm text-[var(--viction-text-secondary)]">Financial Infrastructure</p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-20 h-20 mx-auto mb-4 p-4 bg-[var(--viction-surface-elevated)] rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <img 
+                src="https://viction.xyz/static/media/user-2.4c438ec378f299dc8873.png" 
+                alt="Community"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h3 className="font-semibold text-[var(--viction-text-primary)]">Community</h3>
+            <p className="text-sm text-[var(--viction-text-secondary)]">Decentralized Governance</p>
+          </div>
+        </div>
+        
+        {/* Connecting lines */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl">
+          <svg className="w-full h-32" viewBox="0 0 800 120">
+            <path 
+              d="M50,60 Q200,20 400,60 T750,60" 
+              stroke="var(--viction-primary)" 
+              strokeWidth="2" 
+              fill="none" 
+              opacity="0.3"
+              strokeDasharray="5,5"
+            />
+          </svg>
         </div>
       </section>
 
