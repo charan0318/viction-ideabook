@@ -1,5 +1,12 @@
 import { Project } from "@/data/projects";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Check, Star, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +28,7 @@ const getProjectLogo = (projectName: string) => {
     "Eter": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzYzNjZGMSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTBweCIgZm9udC13ZWlnaHQ9IjcwMCI+RVRFUjwvdGV4dD48L3N2Zz4=",
     "Viction Insights": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjMUUxRTFFIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRjhGNkQ3IiBmb250LXNpemU9IjE0cHgiIGZvbnQtd2VpZ2h0PSI3MDAiPlY8L3RleHQ+PC9zdmc+",
   };
-  
+
   return logos[projectName] || "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjOTg4Rjg2Ii8+PC9zdmc+";
 };
 
@@ -50,6 +57,9 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
               <DialogTitle className="text-2xl font-bold">
                 <span className="gradient-text">{project.name}</span>
               </DialogTitle>
+              <DialogDescription className="text-[var(--viction-text-secondary)]">
+                {project.tagline}
+              </DialogDescription>
               <div className="flex items-center gap-4 pt-2">
                 <span className="text-[var(--viction-primary)] font-semibold">
                   {project.allocation}
@@ -61,7 +71,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
             </div>
           </div>
         </DialogHeader>
-        
+
         <div className="space-y-8 mt-6">
           <div>
             <h3 className="text-xl font-semibold mb-3 text-[var(--viction-text-primary)]">{project.idea}</h3>
@@ -69,7 +79,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
               {project.fullDescription || project.description}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             <div className="premium-card p-6">
               <h4 className="font-semibold mb-4 text-[var(--viction-text-primary)]">Core Features</h4>
@@ -82,7 +92,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                 ))}
               </ul>
             </div>
-            
+
             <div className="premium-card p-6">
               <h4 className="font-semibold mb-4 text-[var(--viction-text-primary)]">Ecosystem Impact</h4>
               <div className="flex items-start">
@@ -93,7 +103,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
               </div>
             </div>
           </div>
-          
+
           <div className="premium-card p-6 bg-[var(--viction-surface-elevated)]">
             <h4 className="font-semibold mb-4 text-[var(--viction-text-primary)]">Connected Projects</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">

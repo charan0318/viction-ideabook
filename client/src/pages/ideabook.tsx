@@ -2,7 +2,7 @@ import { projects } from "@/data/projects";
 import ProjectCard from "@/components/project-card";
 import ProjectModal from "@/components/project-modal";
 import { useState } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Star } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
