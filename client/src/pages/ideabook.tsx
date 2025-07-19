@@ -35,8 +35,11 @@ const IdeabookPage = () => {
       {/* Main Content */}
       <main className="section-container py-16">
         {/* Introduction */}
-        <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
+        <div className="text-center mb-20 relative">
+          {/* Background elements */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 w-32 h-32 bg-gradient-to-br from-[var(--viction-primary)] to-[var(--viction-secondary)] rounded-full opacity-5 blur-3xl" />
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance relative">
             11 Visionary Projects.<br />
             <span className="gradient-text">One Ecosystem.</span>
           </h1>
@@ -44,6 +47,24 @@ const IdeabookPage = () => {
             Explore how each Retrodrop allocation could transform into ecosystem-defining experiences 
             that bring interoperability, culture, and utility to Viction.
           </p>
+          
+          {/* Stats bar */}
+          <div className="flex justify-center gap-8 mt-12">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-[var(--viction-text-primary)]">11</div>
+              <div className="text-sm text-[var(--viction-text-muted)]">Projects</div>
+            </div>
+            <div className="w-px h-12 bg-[var(--viction-border)]" />
+            <div className="text-center">
+              <div className="text-2xl font-bold text-[var(--viction-text-primary)]">∞</div>
+              <div className="text-sm text-[var(--viction-text-muted)]">Connections</div>
+            </div>
+            <div className="w-px h-12 bg-[var(--viction-border)]" />
+            <div className="text-center">
+              <div className="text-2xl font-bold text-[var(--viction-text-primary)]">1</div>
+              <div className="text-sm text-[var(--viction-text-muted)]">Ecosystem</div>
+            </div>
+          </div>
         </div>
 
         {/* Core Projects */}

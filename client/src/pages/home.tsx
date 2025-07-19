@@ -25,10 +25,18 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
-      <main className="hero-container">
-        <div className="section-container text-center">
+      <main className="hero-container relative overflow-hidden">
+        {/* Grid pattern background */}
+        <div className="grid-pattern" />
+        
+        {/* Floating graphics */}
+        <div className="floating-graphic floating-graphic-1" />
+        <div className="floating-graphic floating-graphic-2" />
+        <div className="floating-graphic floating-graphic-3" />
+        
+        <div className="section-container text-center relative z-10">
           <div className="animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-[var(--viction-surface-elevated)] border border-[var(--viction-border)] rounded-full px-4 py-2 mb-8">
+            <div className="inline-flex items-center gap-2 bg-[var(--viction-surface-elevated)] border border-[var(--viction-border)] rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
               <Star className="w-4 h-4 text-[var(--viction-primary)]" />
               <span className="text-sm font-medium text-[var(--viction-text-secondary)]">Viction Retrodrop Season 2</span>
             </div>
@@ -45,51 +53,110 @@ const Home = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/ideabook">
-                <Button className="btn-primary group">
-                  <span>Explore the Vision</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button className="btn-primary group relative overflow-hidden">
+                  <span className="relative z-10">Explore the Vision</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform relative z-10" />
+                  <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Button>
               </Link>
-              <Button variant="outline" className="border-[var(--viction-border)] text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] hover:border-[var(--viction-primary)] bg-transparent">
+              <Button variant="outline" className="border-[var(--viction-border)] text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] hover:border-[var(--viction-primary)] bg-transparent backdrop-blur-sm">
                 Learn About Viction
               </Button>
             </div>
           </div>
         </div>
+        
+        {/* Bottom curve like Viction's site */}
+        <div className="absolute bottom-0 left-0 right-0 h-24">
+          <svg viewBox="0 0 1200 120" className="w-full h-full">
+            <path 
+              d="M0,60 C300,90 600,30 1200,60 L1200,120 L0,120 Z" 
+              fill="var(--viction-surface)" 
+              opacity="0.5"
+            />
+          </svg>
+        </div>
       </main>
 
       {/* Features Preview */}
       <section className="section-container py-24">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-4 text-[var(--viction-text-primary)]">The Vision Realized</h2>
+          <p className="text-xl text-[var(--viction-text-secondary)] max-w-2xl mx-auto">
+            Transforming individual allocations into a composable ecosystem of interconnected experiences.
+          </p>
+        </div>
+        
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="premium-card p-8 text-center">
-            <div className="w-12 h-12 bg-[var(--viction-primary)] rounded-xl flex items-center justify-center mx-auto mb-6">
-              <Zap className="w-6 h-6 text-[var(--viction-background)]" />
+          <div className="premium-card p-8 text-center group">
+            <div className="w-16 h-16 bg-gradient-to-br from-[var(--viction-primary)] to-[var(--viction-secondary)] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Zap className="w-8 h-8 text-[var(--viction-background)]" />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-[var(--viction-text-primary)]">11 Core Projects</h3>
             <p className="text-[var(--viction-text-secondary)] leading-relaxed">
               From Coin98's identity layer to Dagora's cultural guilds—discover how each allocation becomes ecosystem infrastructure.
             </p>
+            
+            {/* Visual elements */}
+            <div className="mt-6 flex justify-center space-x-2">
+              <div className="w-2 h-2 bg-[var(--viction-primary)] rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-[var(--viction-secondary)] rounded-full animate-pulse delay-100" />
+              <div className="w-2 h-2 bg-[var(--viction-primary)] rounded-full animate-pulse delay-200" />
+            </div>
           </div>
           
-          <div className="premium-card p-8 text-center">
-            <div className="w-12 h-12 bg-[var(--viction-primary)] rounded-xl flex items-center justify-center mx-auto mb-6">
-              <Users className="w-6 h-6 text-[var(--viction-background)]" />
+          <div className="premium-card p-8 text-center group">
+            <div className="w-16 h-16 bg-gradient-to-br from-[var(--viction-secondary)] to-[var(--viction-primary)] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Users className="w-8 h-8 text-[var(--viction-background)]" />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-[var(--viction-text-primary)]">Interconnected Ecosystem</h3>
             <p className="text-[var(--viction-text-secondary)] leading-relaxed">
               See how identity, reputation, governance, and culture layers create emergent value through composability.
             </p>
+            
+            {/* Network visualization */}
+            <div className="mt-6 flex justify-center">
+              <div className="relative w-16 h-8">
+                <div className="absolute inset-0 flex items-center justify-between">
+                  <div className="w-2 h-2 bg-[var(--viction-primary)] rounded-full" />
+                  <div className="w-2 h-2 bg-[var(--viction-secondary)] rounded-full" />
+                  <div className="w-2 h-2 bg-[var(--viction-primary)] rounded-full" />
+                </div>
+                <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-[var(--viction-primary)] via-[var(--viction-secondary)] to-[var(--viction-primary)] opacity-50" />
+              </div>
+            </div>
           </div>
           
-          <div className="premium-card p-8 text-center">
-            <div className="w-12 h-12 bg-[var(--viction-primary)] rounded-xl flex items-center justify-center mx-auto mb-6">
-              <Star className="w-6 h-6 text-[var(--viction-background)]" />
+          <div className="premium-card p-8 text-center group">
+            <div className="w-16 h-16 bg-gradient-to-br from-[var(--viction-primary)] to-[var(--viction-secondary)] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Star className="w-8 h-8 text-[var(--viction-background)]" />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-[var(--viction-text-primary)]">Real Utility Vision</h3>
             <p className="text-[var(--viction-text-secondary)] leading-relaxed">
               Beyond token distributions—explore features that create tangible value for everyday Viction users.
             </p>
+            
+            {/* Star pattern */}
+            <div className="mt-6 flex justify-center">
+              <div className="relative w-12 h-12">
+                <Star className="w-3 h-3 text-[var(--viction-primary)] absolute top-0 left-1/2 transform -translate-x-1/2" />
+                <Star className="w-3 h-3 text-[var(--viction-secondary)] absolute bottom-0 left-1/2 transform -translate-x-1/2" />
+                <Star className="w-3 h-3 text-[var(--viction-primary)] absolute left-0 top-1/2 transform -translate-y-1/2" />
+                <Star className="w-3 h-3 text-[var(--viction-secondary)] absolute right-0 top-1/2 transform -translate-y-1/2" />
+              </div>
+            </div>
           </div>
+        </div>
+        
+        {/* Call to action */}
+        <div className="text-center mt-16">
+          <Link href="/ideabook">
+            <Button className="btn-primary group px-8 py-3">
+              <span>Explore All Projects</span>
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </section>
 
