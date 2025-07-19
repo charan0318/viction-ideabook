@@ -1,0 +1,37 @@
+Uncaught ReferenceError: Star is not defined
+    at IdeabookPage (ideabook.tsx:135:14)
+    at renderWithHooks (chunk-WERSD76P.js?v=7f5824ee:11548:26)
+    at mountIndeterminateComponent (chunk-WERSD76P.js?v=7f5824ee:14926:21)
+    at beginWork (chunk-WERSD76P.js?v=7f5824ee:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-WERSD76P.js?v=7f5824ee:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-WERSD76P.js?v=7f5824ee:3699:24)
+    at invokeGuardedCallback (chunk-WERSD76P.js?v=7f5824ee:3733:39)
+    at beginWork$1 (chunk-WERSD76P.js?v=7f5824ee:19765:15)
+    at performUnitOfWork (chunk-WERSD76P.js?v=7f5824ee:19198:20)
+    at workLoopSync (chunk-WERSD76P.js?v=7f5824ee:19137:13)Understand this error
+chunk-WERSD76P.js?v=7f5824ee:14032 The above error occurred in the <IdeabookPage> component:
+
+    at IdeabookPage (https://5cbdcbe3-3439-429d-a95a-746ddcae58c1-00-1ixjati17kpz7.picard.replit.dev/src/pages/ideabook.tsx:27:53)
+    at Route (https://5cbdcbe3-3439-429d-a95a-746ddcae58c1-00-1ixjati17kpz7.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=7f5824ee:323:16)
+    at Switch (https://5cbdcbe3-3439-429d-a95a-746ddcae58c1-00-1ixjati17kpz7.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=7f5824ee:379:17)
+    at Router
+    at div
+    at Provider (https://5cbdcbe3-3439-429d-a95a-746ddcae58c1-00-1ixjati17kpz7.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-DWV4X2LQ.js?v=7f5824ee:55:15)
+    at TooltipProvider (https://5cbdcbe3-3439-429d-a95a-746ddcae58c1-00-1ixjati17kpz7.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=7f5824ee:2242:5)
+    at QueryClientProvider (https://5cbdcbe3-3439-429d-a95a-746ddcae58c1-00-1ixjati17kpz7.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=7f5824ee:2805:3)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+logCapturedError @ chunk-WERSD76P.js?v=7f5824ee:14032Understand this error
+chunk-WERSD76P.js?v=7f5824ee:19413 Uncaught ReferenceError: Star is not defined
+    at IdeabookPage (ideabook.tsx:135:14)
+    at renderWithHooks (chunk-WERSD76P.js?v=7f5824ee:11548:26)
+    at mountIndeterminateComponent (chunk-WERSD76P.js?v=7f5824ee:14926:21)
+    at beginWork (chunk-WERSD76P.js?v=7f5824ee:15914:22)
+    at beginWork$1 (chunk-WERSD76P.js?v=7f5824ee:19753:22)
+    at performUnitOfWork (chunk-WERSD76P.js?v=7f5824ee:19198:20)
+    at workLoopSync (chunk-WERSD76P.js?v=7f5824ee:19137:13)
+    at renderRootSync (chunk-WERSD76P.js?v=7f5824ee:19116:15)
+    at recoverFromConcurrentError (chunk-WERSD76P.js?v=7f5824ee:18736:28)
+    at performConcurrentWorkOnRoot (chunk-WERSD76P.js?v=7f5824ee:18684:30)
