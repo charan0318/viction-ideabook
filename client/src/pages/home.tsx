@@ -5,20 +5,6 @@ import { Button } from "@/components/ui/button";
 const Home = () => {
   return (
     <div className="min-h-screen bg-[var(--viction-background)] text-[var(--viction-text-primary)]">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-[var(--viction-background)]/95 backdrop-blur-md border-b border-[var(--viction-border)]">
-        <div className="section-container py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[var(--viction-primary)] rounded-lg flex items-center justify-center">
-                <span className="text-[var(--viction-background)] font-bold text-sm">V</span>
-              </div>
-              <span className="font-semibold text-lg text-[var(--viction-text-primary)]">Viction Ideabook</span>
-            </div>
-            
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <main className="hero-container relative overflow-hidden">

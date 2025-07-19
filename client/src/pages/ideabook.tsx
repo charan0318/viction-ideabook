@@ -16,21 +16,6 @@ const IdeabookPage = () => {
 
   return (
     <div className="min-h-screen bg-[var(--viction-background)] text-[var(--viction-text-primary)]">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-[var(--viction-background)]/95 backdrop-blur-md border-b border-[var(--viction-border)]">
-        <div className="section-container py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/">
-              <Button variant="ghost" className="flex items-center gap-2 text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)]">
-                <ArrowLeft className="h-4 w-4" />
-                Back to Home
-              </Button>
-            </Link>
-            <h1 className="text-xl font-semibold">Viction Retrodrop Ideabook</h1>
-            <div className="w-[100px]" /> {/* Spacer for center alignment */}
-          </div>
-        </div>
-      </header>
 
       {/* Main Content */}
       <main className="section-container py-16 relative overflow-hidden">
