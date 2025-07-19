@@ -13,7 +13,7 @@ const Home = () => {
               <div className="w-8 h-8 bg-[var(--viction-primary)] rounded-lg flex items-center justify-center">
                 <span className="text-[var(--viction-background)] font-bold text-sm">V</span>
               </div>
-              <span className="font-semibold text-lg text-[var(--viction-text-primary)]">Viction</span>
+              <span className="font-semibold text-lg text-[var(--viction-text-primary)]">Viction Ideabook</span>
             </div>
             <nav className="hidden md:flex items-center gap-8">
               <a href="#" className="text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] transition-colors font-medium">About</a>
@@ -59,7 +59,11 @@ const Home = () => {
                   <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Button>
               </Link>
-              <Button variant="outline" className="border-[var(--viction-border)] text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] hover:border-[var(--viction-primary)] bg-transparent backdrop-blur-sm">
+              <Button 
+                variant="outline" 
+                className="border-[var(--viction-border)] text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] hover:border-[var(--viction-primary)] bg-transparent backdrop-blur-sm"
+                onClick={() => window.open('https://viction.xyz', '_blank')}
+              >
                 Learn About Viction
               </Button>
             </div>
