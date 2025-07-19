@@ -104,18 +104,18 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
             </div>
           </div>
 
-          <div className="premium-card p-6 bg-[var(--viction-surface-elevated)]">
+          <div className="premium-card p-6 bg-[var(--viction-surface)]">
             <h4 className="font-semibold mb-4 text-[var(--viction-text-primary)]">Connected Projects</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
               {project.touchpoints.map((touchpoint, index) => (
-                <div key={index} className="text-center p-3 bg-[var(--viction-surface)] border border-[var(--viction-border)] rounded-lg">
-                  <div className="text-xl mb-1">{touchpoint.emoji}</div>
-                  <div className="text-xs text-[var(--viction-text-secondary)] font-medium">{touchpoint.name}</div>
+                <div key={index} className="text-center p-4 bg-[var(--viction-background)] border-2 border-[var(--viction-border)] rounded-xl hover:border-[var(--viction-primary)] transition-colors">
+                  <div className="text-2xl mb-2">{touchpoint.emoji}</div>
+                  <div className="text-sm text-[var(--viction-text-primary)] font-semibold">{touchpoint.name}</div>
                 </div>
               ))}
             </div>
             {project.connectionsDescription && (
-              <p className="text-sm text-[var(--viction-text-secondary)] leading-relaxed">
+              <p className="text-sm text-[var(--viction-text-primary)] leading-relaxed bg-[var(--viction-surface-elevated)] p-4 rounded-lg border border-[var(--viction-border)]">
                 {project.connectionsDescription}
               </p>
             )}

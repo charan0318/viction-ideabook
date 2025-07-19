@@ -194,15 +194,40 @@ const IdeabookPage = () => {
             This bounty submission demonstrates how each Retrodrop recipient could integrate 
             with the ecosystem to create composable, user-centric experiences that embody Viction's vision.
           </p>
-          <div className="inline-flex items-center gap-2 bg-[var(--viction-surface-elevated)] border border-[var(--viction-border)] rounded-full px-6 py-3">
+          <div className="inline-flex items-center gap-2 bg-[var(--viction-surface-elevated)] border border-[var(--viction-border)] rounded-full px-6 py-3 mb-8">
             <Star className="w-5 h-5 text-[var(--viction-primary)]" />
             <span className="font-medium text-[var(--viction-text-primary)]">Viction Retrodrop #2 Accelerates</span>
           </div>
-          <Link href="/">
-            <Button className="btn-primary">
-              Back to Overview
-            </Button>
-          </Link>
+          
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-[var(--viction-text-secondary)] text-sm">
+              Built with ❤️ from{" "}
+              <a 
+                href="https://x.com/ch04niverse" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[var(--viction-primary)] hover:text-[var(--viction-secondary)] transition-colors font-medium"
+              >
+                ch04niverse
+              </a>
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/">
+                <Button className="btn-primary">
+                  Back to Overview
+                </Button>
+              </Link>
+              
+              <Button 
+                variant="outline" 
+                className="border-[var(--viction-border)] text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)] hover:border-[var(--viction-primary)]"
+                onClick={() => window.open('https://x.com/ch04niverse', '_blank')}
+              >
+                Check the tweet here
+              </Button>
+            </div>
+          </div>
         </section>
       </main>
 

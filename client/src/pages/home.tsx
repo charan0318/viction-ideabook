@@ -29,6 +29,16 @@ const Home = () => {
         {/* Grid pattern background */}
         <div className="grid-pattern" />
         
+        {/* VIC Token Background */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-8 pointer-events-none z-0" style={{ animation: 'floatComplex 15s ease-in-out infinite' }}>
+          <img 
+            src="https://viction.xyz/static/media/token-vic.de13484df2ab71f95122.png" 
+            alt="VIC Token"
+            className="w-full h-full object-contain"
+            style={{ animation: 'breathe 10s ease-in-out infinite' }}
+          />
+        </div>
+        
         {/* Floating graphics */}
         <div className="floating-graphic floating-graphic-1" />
         <div className="floating-graphic floating-graphic-2" />
