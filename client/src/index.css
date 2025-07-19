@@ -3,57 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(262, 73%, 57%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
-  --radius: 0.5rem;
-  
-  /* Viction Brand Colors */
-  --viction-purple: hsl(262, 73%, 57%);
-  --viction-blue: hsl(195, 100%, 50%);
-  --dark-bg: hsl(0, 0%, 7%);
-  --dark-surface: hsl(0, 0%, 12%);
-  --dark-border: hsl(0, 0%, 16%);
-  --light-grey: hsl(210, 9%, 96%);
-  --text-secondary: hsl(0, 0%, 55%);
-}
-
-.light {
+  /* Light theme - Viction inspired */
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --foreground: hsl(220, 15%, 12%);
+  --muted: hsl(220, 10%, 96%);
+  --muted-foreground: hsl(220, 5%, 65%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(220, 15%, 12%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(262, 73%, 57%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(20, 14.3%, 4.1%);
+  --card-foreground: hsl(220, 15%, 12%);
+  --border: hsl(220, 10%, 92%);
+  --input: hsl(220, 10%, 92%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(220, 10%, 96%);
+  --secondary-foreground: hsl(220, 15%, 12%);
+  --accent: hsl(220, 10%, 96%);
+  --accent-foreground: hsl(220, 15%, 12%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(221, 83%, 53%);
+  --radius: 8px;
+  
+  /* Viction Brand Colors - Light Theme */
+  --viction-primary: hsl(221, 83%, 53%);
+  --viction-secondary: hsl(195, 100%, 48%);
+  --viction-accent: hsl(221, 83%, 53%);
+  --viction-background: hsl(0, 0%, 100%);
+  --viction-surface: hsl(220, 10%, 98%);
+  --viction-border: hsl(220, 10%, 88%);
+  --viction-text-primary: hsl(220, 15%, 12%);
+  --viction-text-secondary: hsl(220, 5%, 45%);
+  --viction-text-muted: hsl(220, 5%, 65%);
 }
 
 @layer base {
@@ -63,34 +44,90 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 16px;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-feature-settings: 'cv11', 'cv02', 'cv03', 'cv04';
+    line-height: 1.5;
+    letter-spacing: -0.011em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 600;
   }
 }
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, var(--viction-purple) 0%, var(--viction-blue) 100%);
+    background: linear-gradient(135deg, var(--viction-primary) 0%, var(--viction-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .glassmorphism {
-    background: rgba(30, 30, 30, 0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  .hero-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+      radial-gradient(circle at 20% 50%, hsl(221, 83%, 53%, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(195, 100%, 48%, 0.05) 0%, transparent 50%),
+      var(--viction-background);
   }
   
-  .hero-bg {
-    background: radial-gradient(ellipse at center, rgba(114, 57, 234, 0.15) 0%, var(--dark-bg) 70%);
+  .premium-card {
+    background: var(--viction-surface);
+    border: 1px solid var(--viction-border);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .premium-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+    border-color: var(--viction-primary);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, var(--viction-primary) 0%, var(--viction-secondary) 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.011em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px -5px hsl(221, 83%, 53%, 0.4);
+  }
+  
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
   }
 }
 
@@ -100,49 +137,30 @@
   }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes glow {
-  0% { box-shadow: 0 0 20px rgba(114, 57, 234, 0.3); }
-  100% { box-shadow: 0 0 40px rgba(114, 57, 234, 0.6); }
-}
-
-@keyframes slideUp {
-  0% { transform: translateY(100px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@keyframes bounce {
-  0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
-  40%, 43% { transform: translate3d(0,-30px,0); }
-  70% { transform: translate3d(0,-15px,0); }
-  90% { transform: translate3d(0,-4px,0); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.8s ease-out;
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease-out;
-}
-
-.scroll-indicator {
-  animation: bounce 2s infinite;
+  animation: fadeIn 0.6s ease-out;
 }
