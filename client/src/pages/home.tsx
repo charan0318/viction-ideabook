@@ -233,6 +233,13 @@ const Home = () => {
       {/* Footer */}
       <footer className="section-container py-16 border-t border-[var(--viction-border)]">
         <div className="text-center">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/viction-logo.png" 
+              alt="Viction Logo" 
+              className="h-8 opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
           <h3 className="text-2xl font-bold mb-4 text-[var(--viction-text-primary)]">Ready to Build the Future?</h3>
           <p className="text-[var(--viction-text-secondary)] mb-8 max-w-2xl mx-auto">
             This ideabook represents a vision for Web3's true potential—not isolated applications, 
