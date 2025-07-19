@@ -75,7 +75,7 @@ const Home = () => {
       </main>
 
       {/* Features Preview */}
-      <section className="section-container py-24">
+      <section className="section-container py-16">
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-[var(--viction-text-primary)]">The Vision Realized</h2>
@@ -242,6 +242,19 @@ const Home = () => {
             <span>Created for Viction Retrodrop Season 2</span>
             <span>•</span>
             <span>Built with vision for the ecosystem</span>
+          </div>
+          <div className="mt-4 text-center">
+            <p className="text-[var(--viction-text-secondary)] text-sm">
+              Built with ❤️ from{" "}
+              <a 
+                href="https://x.com/ch04niverse" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[var(--viction-primary)] hover:text-[var(--viction-secondary)] transition-colors font-medium"
+              >
+                ch04niverse
+              </a>
+            </p>
           </div>
         </div>
       </footer>

@@ -18,18 +18,10 @@ const IdeabookPage = () => {
     <div className="min-h-screen bg-[var(--viction-background)] text-[var(--viction-text-primary)]">
 
       {/* Main Content */}
-      <main className="section-container py-16 relative overflow-hidden">
+      <main className="section-container py-8 relative overflow-hidden">
         {/* Animated Background Images */}
         <div className="absolute inset-0 pointer-events-none">
-          {/* Global Payment Image - Right side, large */}
-          <div className="absolute top-80 -right-24 w-80 h-80 opacity-8" style={{ animation: 'floatComplex 10s ease-in-out infinite', animationDelay: '2s' }}>
-            <img 
-              src="https://viction.xyz/static/media/global-payment.547fe1f6ba16db0959e5.png" 
-              alt="Global Payment"
-              className="w-full h-full object-contain transform -rotate-12 hover:rotate-6 transition-transform duration-[3s] ease-in-out"
-              style={{ animation: 'breathe 6s ease-in-out infinite', animationDelay: '1s' }}
-            />
-          </div>
+          
           
           {/* Additional floating DeFi Hub - medium, bottom left */}
           <div className="absolute bottom-40 left-10 w-48 h-48 opacity-6" style={{ animation: 'float 15s ease-in-out infinite', animationDelay: '4s' }}>
