@@ -10,14 +10,17 @@ interface ProjectCardProps {
 // Logo mappings for each project
 const getProjectLogo = (projectName: string) => {
   const logos: Record<string, string> = {
-    "Coin98": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzE5QzU2QSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTRweCIgZm9udC13ZWlnaHQ9IjcwMCI+Qzk4PC90ZXh0Pjwvc3ZnPg==",
-    "Dagora": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjOEI1Q0Y2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxMnB4IiBmb250LXdlaWdodD0iNzAwIj5EQUc8L3RleHQ+PC9zdmc+",
-    "Saros": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzEwN0VGRiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTJweCIgZm9udC13ZWlnaHQ9IjcwMCI+U0FSPC90ZXh0Pjwvc3ZnPg==",
-    "OneID": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjMEY3MkZGIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxMHB4IiBmb250LXdlaWdodD0iNzAwIj4xSUQ8L3RleHQ+PC9zdmc+",
-    "Dada": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iI0ZGNkEzNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTBweCIgZm9udC13ZWlnaHQ9IjcwMCI+REFEQTwvdGV4dD48L3N2Zz4=",
-    "Rabbit": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjRkY0NTg1Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxMHB4IiBmb250LXdlaWdodD0iNzAwIj5SQUI8L3RleHQ+PC9zdmc+",
-    "Eter": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzYzNjZGMSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTBweCIgZm9udC13ZWlnaHQ9IjcwMCI+RVRFUjwvdGV4dD48L3N2Zz4=",
-    "Viction Insights": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjMUUxRTFFIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRjhGNkQ3IiBmb250LXNpemU9IjE0cHgiIGZvbnQtd2VpZ2h0PSI3MDAiPlY8L3RleHQ+PC9zdmc+",
+    "RabbitSwap": "https://icons.llamao.fi/icons/protocols/rabbit-swap?w=48&h=48",
+    "deFusion": "https://pbs.twimg.com/profile_images/1767902897583562752/ZIz8p0ag_200x200.jpg",
+    "Coin98 Super Wallet": "https://www.cryptologos.cc/logos/coin98-c98-logo.png?v=040",
+    "Dagora": "https://cdn.discordapp.com/icons/929758371152814142/99cf16598e62f992a0d0ce03eb0bb231.png",
+    "OneID": "https://blog.oneid.xyz/_next/image?url=https%3A%2F%2Ffile.coin98.com%2Fimages%2Favatar-VeJ5OHkDvUMZUPGf.png&w=1920&q=75",
+    "Ivy": "https://www.viction.xyz/static/media/ivy.e7b008b9d40da3ae8aef.png",
+    "The Contrarians x Athletix": "https://pbs.twimg.com/profile_images/1908510124265869312/trAqT1S-_200x200.jpg",
+    "Vikto": "https://pbs.twimg.com/profile_images/1920003427750555648/sVtg82Kz_200x200.jpg",
+    "Efihub": "https://pbs.twimg.com/profile_images/1745280890484502528/bbmtsVfW_200x200.jpg",
+    "World of Dypians": "https://pbs.twimg.com/profile_images/1875451374684549120/SEU0jro3_200x200.png",
+    "Not For Thinking": "https://ugc.production.linktr.ee/b3de4644-d51c-4811-9c3d-89f8f38810cf_5.1.png"
   };
   
   return logos[projectName] || "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjOTg4Rjg2Ii8+PC9zdmc+";
@@ -50,7 +53,7 @@ const ProjectCard = ({ project, onOpenModal }: ProjectCardProps) => {
             <img 
               src={getProjectLogo(project.name)} 
               alt={`${project.name} logo`}
-              className="w-10 h-10 rounded-lg shadow-sm"
+              className="w-10 h-10 rounded-lg shadow-sm object-cover object-center"
             />
             <div>
               <h4 className="font-semibold text-lg leading-tight">{project.name}</h4>
