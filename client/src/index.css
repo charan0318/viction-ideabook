@@ -3,38 +3,45 @@
 @tailwind utilities;
 
 :root {
-  /* Light theme - Viction inspired */
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(220, 15%, 12%);
-  --muted: hsl(220, 10%, 96%);
-  --muted-foreground: hsl(220, 5%, 65%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(220, 15%, 12%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(220, 15%, 12%);
-  --border: hsl(220, 10%, 92%);
-  --input: hsl(220, 10%, 92%);
-  --primary: hsl(221, 83%, 53%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(220, 10%, 96%);
-  --secondary-foreground: hsl(220, 15%, 12%);
-  --accent: hsl(220, 10%, 96%);
-  --accent-foreground: hsl(220, 15%, 12%);
+  /* Viction Official Brand Colors */
+  --viction-black: #1E1E1E;
+  --viction-warm-gray-7: #988F86;
+  --viction-warm-gray-1: #E0DED8;
+  --viction-cream: #F8F6D7;
+  
+  /* Light theme using Viction colors */
+  --background: #F8F6D7;
+  --foreground: #1E1E1E;
+  --muted: #E0DED8;
+  --muted-foreground: #988F86;
+  --popover: #F8F6D7;
+  --popover-foreground: #1E1E1E;
+  --card: #F8F6D7;
+  --card-foreground: #1E1E1E;
+  --border: #E0DED8;
+  --input: #E0DED8;
+  --primary: #1E1E1E;
+  --primary-foreground: #F8F6D7;
+  --secondary: #E0DED8;
+  --secondary-foreground: #1E1E1E;
+  --accent: #988F86;
+  --accent-foreground: #F8F6D7;
   --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(221, 83%, 53%);
+  --destructive-foreground: #F8F6D7;
+  --ring: #1E1E1E;
   --radius: 8px;
   
-  /* Viction Brand Colors - Light Theme */
-  --viction-primary: hsl(221, 83%, 53%);
-  --viction-secondary: hsl(195, 100%, 48%);
-  --viction-accent: hsl(221, 83%, 53%);
-  --viction-background: hsl(0, 0%, 100%);
-  --viction-surface: hsl(220, 10%, 98%);
-  --viction-border: hsl(220, 10%, 88%);
-  --viction-text-primary: hsl(220, 15%, 12%);
-  --viction-text-secondary: hsl(220, 5%, 45%);
-  --viction-text-muted: hsl(220, 5%, 65%);
+  /* Viction Brand Colors - Semantic */
+  --viction-primary: #1E1E1E;
+  --viction-secondary: #988F86;
+  --viction-accent: #988F86;
+  --viction-background: #F8F6D7;
+  --viction-surface: #F8F6D7;
+  --viction-surface-elevated: rgba(224, 222, 216, 0.5);
+  --viction-border: #E0DED8;
+  --viction-text-primary: #1E1E1E;
+  --viction-text-secondary: #988F86;
+  --viction-text-muted: rgba(152, 143, 134, 0.7);
 }
 
 @layer base {
@@ -76,10 +83,8 @@
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, var(--viction-primary) 0%, var(--viction-secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--viction-primary);
+    font-weight: 700;
   }
   
   .hero-container {
@@ -87,41 +92,56 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--viction-background);
+    position: relative;
+  }
+  
+  .hero-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: 
-      radial-gradient(circle at 20% 50%, hsl(221, 83%, 53%, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(195, 100%, 48%, 0.05) 0%, transparent 50%),
-      var(--viction-background);
+      radial-gradient(circle at 20% 50%, rgba(152, 143, 134, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(30, 30, 30, 0.03) 0%, transparent 50%);
+    pointer-events: none;
   }
   
   .premium-card {
     background: var(--viction-surface);
     border: 1px solid var(--viction-border);
-    border-radius: 16px;
+    border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(30, 30, 30, 0.1);
   }
   
   .premium-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
-    border-color: var(--viction-primary);
+    box-shadow: 0 8px 30px rgba(30, 30, 30, 0.12);
+    border-color: var(--viction-secondary);
   }
   
   .btn-primary {
-    background: linear-gradient(135deg, var(--viction-primary) 0%, var(--viction-secondary) 100%);
-    color: white;
+    background: var(--viction-primary);
+    color: var(--viction-background);
     border: none;
-    border-radius: 12px;
-    padding: 16px 32px;
+    border-radius: 8px;
+    padding: 14px 28px;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: -0.011em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    border: 2px solid var(--viction-primary);
   }
   
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 25px -5px hsl(221, 83%, 53%, 0.4);
+    box-shadow: 0 6px 20px rgba(30, 30, 30, 0.2);
+    background: transparent;
+    color: var(--viction-primary);
   }
   
   .section-container {

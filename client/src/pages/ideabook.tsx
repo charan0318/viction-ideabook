@@ -15,13 +15,13 @@ const IdeabookPage = () => {
   const coreContributors = projects.filter(p => p.category === 'Core Contributor');
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--viction-background))] text-[hsl(var(--viction-text-primary))]">
+    <div className="min-h-screen bg-[var(--viction-background)] text-[var(--viction-text-primary)]">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-[hsl(var(--viction-background))]/95 backdrop-blur-md border-b border-[hsl(var(--viction-border))]">
+      <header className="sticky top-0 z-50 bg-[var(--viction-background)]/95 backdrop-blur-md border-b border-[var(--viction-border)]">
         <div className="section-container py-4">
           <div className="flex items-center justify-between">
             <Link href="/">
-              <Button variant="ghost" className="flex items-center gap-2 text-[hsl(var(--viction-text-secondary))] hover:text-[hsl(var(--viction-text-primary))]">
+              <Button variant="ghost" className="flex items-center gap-2 text-[var(--viction-text-secondary)] hover:text-[var(--viction-text-primary)]">
                 <ArrowLeft className="h-4 w-4" />
                 Back to Home
               </Button>
@@ -40,7 +40,7 @@ const IdeabookPage = () => {
             11 Visionary Projects.<br />
             <span className="gradient-text">One Ecosystem.</span>
           </h1>
-          <p className="text-xl text-[hsl(var(--viction-text-secondary))] max-w-3xl mx-auto text-balance">
+          <p className="text-xl text-[var(--viction-text-secondary)] max-w-3xl mx-auto text-balance">
             Explore how each Retrodrop allocation could transform into ecosystem-defining experiences 
             that bring interoperability, culture, and utility to Viction.
           </p>
@@ -50,7 +50,7 @@ const IdeabookPage = () => {
         <section className="mb-20">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Core Projects</h2>
-            <p className="text-[hsl(var(--viction-text-secondary))] text-lg">
+            <p className="text-[var(--viction-text-secondary)] text-lg">
               The foundation infrastructure that powers the Viction ecosystem.
             </p>
           </div>
@@ -69,7 +69,7 @@ const IdeabookPage = () => {
         <section className="mb-20">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Core Communities</h2>
-            <p className="text-[hsl(var(--viction-text-secondary))] text-lg">
+            <p className="text-[var(--viction-text-secondary)] text-lg">
               Community-driven initiatives that foster engagement and growth.
             </p>
           </div>
@@ -88,7 +88,7 @@ const IdeabookPage = () => {
         <section className="mb-20">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Core Contributors</h2>
-            <p className="text-[hsl(var(--viction-text-secondary))] text-lg">
+            <p className="text-[var(--viction-text-secondary)] text-lg">
               Essential services that enhance the entire ecosystem's capabilities.
             </p>
           </div>
@@ -104,9 +104,9 @@ const IdeabookPage = () => {
         </section>
 
         {/* Footer Section */}
-        <section className="text-center py-16 border-t border-[hsl(var(--viction-border))]">
+        <section className="text-center py-16 border-t border-[var(--viction-border)]">
           <h3 className="text-2xl font-bold mb-4">Ready to Build the Future?</h3>
-          <p className="text-[hsl(var(--viction-text-secondary))] mb-8 max-w-2xl mx-auto">
+          <p className="text-[var(--viction-text-secondary)] mb-8 max-w-2xl mx-auto">
             These ideas represent a vision for what's possible when projects work together 
             to create something greater than the sum of their parts.
           </p>
