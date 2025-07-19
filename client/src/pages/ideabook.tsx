@@ -33,9 +33,72 @@ const IdeabookPage = () => {
       </header>
 
       {/* Main Content */}
-      <main className="section-container py-16">
+      <main className="section-container py-16 relative overflow-hidden">
+        {/* Animated Background Images */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* DeFi Hub Image - Left side, large */}
+          <div className="absolute top-40 -left-20 w-96 h-96 opacity-10" style={{ animation: 'floatComplex 12s ease-in-out infinite' }}>
+            <img 
+              src="https://viction.xyz/static/media/defi-hub.1661173bbad5d6064ded.png" 
+              alt="DeFi Hub"
+              className="w-full h-full object-contain transform rotate-12 hover:rotate-6 transition-transform duration-[3s] ease-in-out"
+              style={{ animation: 'breathe 8s ease-in-out infinite' }}
+            />
+          </div>
+          
+          {/* Global Payment Image - Right side, large */}
+          <div className="absolute top-80 -right-24 w-80 h-80 opacity-8" style={{ animation: 'floatComplex 10s ease-in-out infinite', animationDelay: '2s' }}>
+            <img 
+              src="https://viction.xyz/static/media/global-payment.547fe1f6ba16db0959e5.png" 
+              alt="Global Payment"
+              className="w-full h-full object-contain transform -rotate-12 hover:rotate-6 transition-transform duration-[3s] ease-in-out"
+              style={{ animation: 'breathe 6s ease-in-out infinite', animationDelay: '1s' }}
+            />
+          </div>
+          
+          {/* Additional floating DeFi Hub - medium, bottom left */}
+          <div className="absolute bottom-40 left-10 w-48 h-48 opacity-6" style={{ animation: 'float 15s ease-in-out infinite', animationDelay: '4s' }}>
+            <img 
+              src="https://viction.xyz/static/media/defi-hub.1661173bbad5d6064ded.png" 
+              alt="DeFi Hub"
+              className="w-full h-full object-contain transform rotate-45 hover:rotate-12 transition-transform duration-[4s] ease-in-out"
+              style={{ animation: 'breathe 10s ease-in-out infinite', animationDelay: '2s' }}
+            />
+          </div>
+          
+          {/* Additional floating Global Payment - medium, top right */}
+          <div className="absolute top-20 right-10 w-56 h-56 opacity-7" style={{ animation: 'floatComplex 14s ease-in-out infinite', animationDelay: '1s' }}>
+            <img 
+              src="https://viction.xyz/static/media/global-payment.547fe1f6ba16db0959e5.png" 
+              alt="Global Payment"
+              className="w-full h-full object-contain transform -rotate-24 hover:-rotate-12 transition-transform duration-[3.5s] ease-in-out"
+              style={{ animation: 'breathe 9s ease-in-out infinite', animationDelay: '3s' }}
+            />
+          </div>
+          
+          {/* Extra small DeFi Hub - center background */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 opacity-4" style={{ animation: 'float 20s ease-in-out infinite', animationDelay: '6s' }}>
+            <img 
+              src="https://viction.xyz/static/media/defi-hub.1661173bbad5d6064ded.png" 
+              alt="DeFi Hub"
+              className="w-full h-full object-contain transform rotate-90"
+              style={{ animation: 'breathe 12s ease-in-out infinite', animationDelay: '4s' }}
+            />
+          </div>
+          
+          {/* Extra small Global Payment - center right background */}
+          <div className="absolute bottom-60 right-1/4 w-40 h-40 opacity-5" style={{ animation: 'floatComplex 18s ease-in-out infinite', animationDelay: '3s' }}>
+            <img 
+              src="https://viction.xyz/static/media/global-payment.547fe1f6ba16db0959e5.png" 
+              alt="Global Payment"
+              className="w-full h-full object-contain transform rotate-180"
+              style={{ animation: 'breathe 7s ease-in-out infinite', animationDelay: '5s' }}
+            />
+          </div>
+        </div>
+
         {/* Introduction */}
-        <div className="text-center mb-20 relative">
+        <div className="text-center mb-20 relative z-10">
           {/* Background elements */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 w-32 h-32 bg-gradient-to-br from-[var(--viction-primary)] to-[var(--viction-secondary)] rounded-full opacity-5 blur-3xl" />
           
